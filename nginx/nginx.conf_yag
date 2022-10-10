@@ -1,0 +1,24 @@
+worker_processes 1;
+
+events { worker_connections 1024; }
+
+http { 
+  upstream myapp1 {
+    server backend1:3000;
+    server backend2:3000;
+    #server frontend1:5173;
+    #server frontend2:5173;
+    server frontend1:8080;
+    server frontend2:8080;
+  }
+
+  server {
+    listen 80;
+    location / {
+      proxy_pass http://myapp1;
+    }
+    location ~* \.(css|js|gif|jpeg|png)$ {
+      expires 168h;
+    }
+  }
+}
