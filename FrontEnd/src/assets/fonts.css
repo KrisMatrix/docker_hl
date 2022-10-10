@@ -1,0 +1,35 @@
+.font-arvo {
+    font-family: 'Arvo'
+}
+
+.font-arvo-bold {
+    font-family: 'ArvoBold'
+}
+
+.font-poppins {
+    font-family: 'Poppins'
+}
+
+.font-hind {
+    font-family: 'HindSiliguri'
+}
+
+@font-face {
+    font-family: "HindSiliguri";
+    src: url("fonts/HindSiliguri-Regular.ttf");
+}
+  
+@font-face {
+    font-family: "Arvo";
+    src: url("fonts/Arvo-Regular.ttf");
+}
+  
+@font-face {
+    font-family: "ArvoBold";
+    src: url("fonts/Arvo-Bold.ttf");
+}
+  
+@font-face {
+    font-family: "Poppins";
+    src: url("fonts/Poppins-Regular.ttf");
+}

@@ -1,0 +1,7 @@
+/* reset.css removes any default spacing that a broswer may implement.
+    This way, any css changes you make will be consistent for all 
+    browsers. */
+@import "./reset.css";
+
+/* Any new fonts. We get them from Google fonts. */
+@import "./fonts.css";

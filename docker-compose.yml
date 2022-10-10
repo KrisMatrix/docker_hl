@@ -1,0 +1,60 @@
+version: '3.8'
+
+services:
+  backend1:
+    image: backend1
+    build:
+      context: Backend
+      dockerfile: ./Dockerfile
+    #environment:
+    #  NODE_ENV: production
+    ports:
+    #  - 3000:3000
+      - 3000
+
+  frontend1:
+    image: frontend1
+    build:
+      context: FrontEnd
+      dockerfile: ./Dockerfile
+    #environment:
+    #  NODE_ENV: production
+    ports:
+      #- 5173:5173
+      #- 5173
+      - 8080
+
+  backend2:
+    image: backend2
+    build:
+      context: Backend
+      dockerfile: ./Dockerfile
+    #environment:
+    #  NODE_ENV: production
+    ports:
+      #- 3000:3000
+      - 3000
+
+  frontend2:
+    image: frontend2
+    build:
+      context: FrontEnd
+      dockerfile: ./Dockerfile
+    #environment:
+    #  NODE_ENV: production
+    ports:
+      #- 5173:5173
+      #- 5173
+      - 8080
+
+  load-balancer:
+    build: 
+      context: nginx
+      dockerfile: ./Dockerfile
+    ports:
+      - 80:80
+    links:
+      - backend1
+      - backend2
+      - frontend1
+      - frontend2

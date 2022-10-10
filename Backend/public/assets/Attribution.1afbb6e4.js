@@ -1,0 +1,1 @@
+import{N as n,a as r,_ as s,r as e,o as c,c as _,b as o}from"./index.bf1d8c24.js";const p={name:"Attribution",components:{NavHeader:n,NavFooter:r}},d={class:"w-full bg-amber-500"};function i(m,l,v,N,f,u){const t=e("NavHeader"),a=e("NavFooter");return c(),_("div",d,[o(t),o(a)])}const $=s(p,[["render",i]]);export{$ as default};
