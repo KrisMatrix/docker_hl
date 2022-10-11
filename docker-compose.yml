@@ -64,6 +64,6 @@ services:
       - 80:80
     links:
       - backend1
-      - backend2
+      # - backend2
       - frontend1
-      - frontend2
+      # - frontend2
